@@ -1,6 +1,6 @@
 <?php
 
-namespace Zyxus\LaravelSluggable\LaravelSluggable;
+namespace Zyxus\LaravelSluggable;
 
 trait LaravelSluggable
 {
