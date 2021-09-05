@@ -12,7 +12,6 @@ class CreateSlugsTable extends Migration
             $table->bigIncrements('id');
 
             $table->morphs('model');
-            $table->string('model_id');
             $table->string('slug');
 
             $table->nullableTimestamps();

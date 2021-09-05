@@ -2,10 +2,10 @@
     "name": "zyxus/laravel-sluggable",
     "description": "A simple way to slugs to any model in Laravel.",
     "type": "library",
-    "license": "LGPL-3.0-or-later",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Zyxus\\LaravelSluggable\\": "packages/zyxus/laravel-sluggable/src/"
+            "Zyxus\\LaravelSluggable\\": "src/"
         }
     },
     "authors": [

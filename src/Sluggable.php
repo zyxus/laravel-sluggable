@@ -2,7 +2,7 @@
 
 namespace Zyxus\LaravelSluggable;
 
-trait LaravelSluggable
+trait Sluggable
 {
     public function setSlug(string $slug)
     {
