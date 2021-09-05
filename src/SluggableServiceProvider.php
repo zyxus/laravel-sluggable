@@ -2,6 +2,8 @@
 
 namespace Zyxus\LaravelSluggable;
 
+use Illuminate\Support\ServiceProvider;
+
 class SluggableServiceProvider extends ServiceProvider
 {
   public function boot()
