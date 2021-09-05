@@ -2,20 +2,29 @@
 
 namespace Zyxus\LaravelSluggable;
 
+use Zyxus\LaravelSluggable\Models\Slug;
+
 trait Sluggable
 {
+    private function getModel()
+    {
+        $model = (new \ReflectionClass($this))->getName();
+        $model = str_replace('App\Models', '', $model);
+        return $model;
+    }
+
     public function setSlug(string $slug)
     {
-        dd('setSlug called');
+        $sluggable = new Slug();
+        $sluggable->__set('model_type', $this->getModel());
+        $sluggable->__set('model_id', $this->id);
+        $sluggable->__set('slug', $slug);
+        $sluggable->save();
     }
 
     public function getSlug()
     {
-        dd('getSlug called');
-    }
-
-    public function listSlugs()
-    {
-        dd('listSlugs called');
+        $slug = Slug::find($this->id);
+        return $slug->slug;
     }
 }
