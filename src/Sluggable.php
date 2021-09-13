@@ -22,7 +22,19 @@ trait Sluggable
         $sluggable->save();
     }
 
+    public function getSlugById()
+    {
+        $slug = Slug::find($this->id);
+        return $slug->slug;
+    }
+
     public function getSlug()
+    {
+        $slug = Slug::find($this->id);
+        return $slug->slug;
+    }
+
+   public function getSlug()
     {
         $slug = Slug::find($this->id);
         return $slug->slug;
