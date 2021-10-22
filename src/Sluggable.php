@@ -9,6 +9,7 @@ trait Sluggable
 {
     public static function getBySlug(string $slug)
     {
+        // TODO: убрать ошибку если модель не найдена
         $slug = Slug::where('slug', $slug)->first();
         return $slug->model;
     }
