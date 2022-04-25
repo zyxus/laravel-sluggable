@@ -9,6 +9,8 @@ class Slug extends Model
 {
     protected $table = "slugs";
 
+    public $timestamps = false;
+
     public $fillable = [
         'model_type',
         'model_id',

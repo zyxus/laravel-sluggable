@@ -18,8 +18,6 @@ class CreateSlugsTable extends Migration
 
             $table->morphs('model');
             $table->string('slug');
-
-            $table->nullableTimestamps();
         });
     }
 

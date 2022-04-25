@@ -15,5 +15,5 @@ getSlug(Model $model, int $model_id)
 ```
 
 ```php
-findSlug(string $slug)
+getBySlug(string $slug)
 ```
