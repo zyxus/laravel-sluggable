@@ -7,14 +7,14 @@ use Zyxus\LaravelSluggable\Models\Slug;
 
 trait Sluggable
 {
-    public static function getBySlug(string $slug)
+    public static function getBySlug(string $slugString)
     {
-        $slug = Slug::where('slug', $slug);
-        $slug = $slug->first();
+        $slug = Slug::where('slug', $slugString)->first();
 
         if (!$slug) {
-            return new Slug;
+            throw new \Exception("Slug $slugString not found");
         }
+
         return $slug->model;
     }
 
